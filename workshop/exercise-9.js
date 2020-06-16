@@ -10,6 +10,13 @@
 
 function greetLong(lst) {
   // lst is an array of strings
+  let longNames = lst.filter(function (name) {
+    return name.length >= 4;
+  })
+
+  return longNames.map(function (name) {
+    return name.replace(name, `Hello ${name}`);
+  });
 }
 // -------------------------------------------------------------------------
 console.log('Q7 greetLong()', greetLong(['Scott', 'Bob', 'Ric', 'Jim']));
